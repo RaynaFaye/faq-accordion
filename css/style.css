@@ -1,9 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
+body {
+  height: 100vh;
+  background: linear-gradient(#af67e9, #6565e7);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 50px 25px;
+}
+.component {
+  display: grid;
+  grid-template-rows: 107px 107px 1fr;
+}
+/* Image Block */
+.image-block {
+  grid-row: 1 / 3;
+  grid-column: 1;
+  z-index: 2;
+}
+.image-block__main-image {
+  background: url(../images/illustration-woman-online-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 25%;
+  height: 196px;
+  width: 100%;
+}
+/* FAQ Block */
+.faq {
+  background: url(../images/bg-pattern-mobile.svg) #ffffff;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  border-radius: 15px;
+  grid-column: 1;
+  grid-row: 2 / -1;
+  z-index: 1;
+  padding: 110px 20px 50px 20px;
+}
+.faq__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+  text-align: center;
+  margin: 25px 0;
+}
+.faq__details {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 15px 0;
+}
+.faq__summary {
+  color: hsl(237, 12%, 33%);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq__summary:hover,
+.faq__summary:focus {
+  color: hsl(14, 88%, 65%);
+}
+.faq__text {
+  color: hsl(240, 6%, 50%);
+  margin: 10px 25px 0 0;
+}
+.faq__details[open] .faq__summary {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+.faq__details .faq__summary,
+.faq__details .faq__summary svg {
+  transition: all 0.5s;
+}
+.faq__details[open] .faq__summary svg {
+  transform: rotate(180deg);
+}
 /* Attribution section */
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 50px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
